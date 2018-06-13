@@ -62,7 +62,7 @@ body {
   min-height: 40px; }
 
 .pf-icon-shrink {
-  width: 40px; }
+  width: 40px !important; }
 
 .pf-name-shrink {
   line-height: 12px;
