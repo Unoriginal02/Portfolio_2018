@@ -1,0 +1,276 @@
+@charset "UTF-8";
+.blue {
+  background-color: rgba(50, 50, 200, 0.2); }
+
+.red {
+  background-color: rgba(255, 0, 0, 0.2); }
+
+.green {
+  background-color: rgba(0, 200, 0, 0.2); }
+
+.white {
+  background-color: white; }
+
+.no-border {
+  border: 0 !important; }
+
+.ruler {
+  height: 1px;
+  width: 100%;
+  background-color: green;
+  position: absolute;
+  z-index: 999999999;
+  top: 500px;
+  display: none; }
+
+body {
+  opacity: 1;
+  transition: .2s opacity;
+  transition-timing-function: linear;
+  position: relative; }
+
+body.fade-out {
+  opacity: 0;
+  transition: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inconsolata", monospace; }
+
+p {
+  font-family: "Roboto", sans-serif;
+  color: #666;
+  font-size: 1em; }
+
+a {
+  color: #E73C59; }
+
+a:hover {
+  color: #E73C59; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: .04rem;
+  font-size: 1em;
+  background-color: #f7f7fa;
+  color: #333;
+  margin: 0px;
+  padding: 0px;
+  -webkit-font-smoothing: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased; }
+
+.pf-invisible {
+  opacity: 0; }
+
+.title {
+  transition: all ease-out .5s; }
+
+.pf-icon {
+  width: 64px;
+  transition: all ease-out .5s; }
+
+.pf-icon-shrink {
+  width: 40px; }
+
+.pf-name-shrink {
+  line-height: 12px;
+  font-size: 90% !important; }
+
+.brand-name {
+  display: block;
+  position: relative;
+  left: 10px;
+  top: 14px;
+  width: 202px; }
+  .brand-name .name {
+    position: relative;
+    top: 0px;
+    font-size: 1.12em;
+    font-weight: 700;
+    color: #444;
+    transition: all ease-out .5s; }
+  .brand-name .title {
+    font-size: .69em;
+    color: #666; }
+
+a:hover {
+  color: #E73C59 !important; }
+
+.hero-statement {
+  border-radius: 4px;
+  background-color: #3b4044;
+  padding: 60px; }
+  .hero-statement h2 {
+    color: #fdcb6e; }
+  .hero-statement h2:before {
+    content: open-quote;
+    color: white; }
+  .hero-statement h2:after {
+    content: close-quote;
+    color: white; }
+  .hero-statement b {
+    color: #ea735b;
+    font-weight: 700; }
+  .hero-statement p {
+    font-family: "Inconsolata", monospace;
+    color: #b2bec3;
+    margin-bottom: 0; }
+  @media (max-width: 767px) {
+    .hero-statement {
+      padding: 40px; } }
+
+.post-title {
+  margin: 40px auto;
+  width: 70%;
+  text-align: center; }
+  .post-title h2 {
+    color: #444;
+    font-family: "Inconsolata", monospace;
+    font-weight: 700; }
+  .post-title p {
+    font-weight: 300; }
+  .post-title h2:before {
+    content: "// "; }
+  @media (max-width: 1199px) {
+    .post-title {
+      width: 80%; } }
+  @media (max-width: 991px) {
+    .post-title {
+      width: 90%; } }
+  @media (max-width: 767px) {
+    .post-title {
+      margin: 20px auto;
+      width: 100%; }
+      .post-title h2 {
+        font-size: 1.9rem; } }
+
+.post-content {
+  margin: 20px auto; }
+  .post-content p, .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6, .post-content ul {
+    width: 70%; }
+  .post-content p {
+    margin: 0 auto 40px;
+    font-weight: 300; }
+  .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+    margin: 0 auto 10px;
+    font-weight: 700; }
+  .post-content img {
+    margin-bottom: 40px; }
+  .post-content ul {
+    margin: 0 auto 40px;
+    font-weight: 300; }
+    .post-content ul b {
+      font-weight: 700; }
+  @media (max-width: 1199px) {
+    .post-content p, .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6, .post-content ul {
+      width: 80%; } }
+  @media (max-width: 991px) {
+    .post-content p, .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6, .post-content ul {
+      width: 90%; } }
+  @media (max-width: 767px) {
+    .post-content p, .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6, .post-content ul {
+      width: 100%; }
+    .post-content img {
+      margin-bottom: 10px; }
+    .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+      margin-top: 10px; }
+    .post-content p {
+      margin: 0 auto 20px; }
+    .post-content ul {
+      margin: 0 auto 20px; } }
+
+.pf_footer {
+  height: 70px; }
+  .pf_footer p {
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    font-family: "Inconsolata", monospace; }
+
+.email-btn {
+  cursor: pointer; }
+
+/*// EDITADO DE WORDPRESS */
+#wpadminbar {
+  position: fixed !important; }
+
+/*// FIN EDITADO DE BOOTSTRAP */
+.container {
+  max-width: 1200px;
+  /*// HE AÑADIDO 48PX PARA COMPENSAR EL PADDING ASIGNADO DESDE EL DOCUMENTO HTML*/
+  padding: 0; }
+
+.shrink-nav {
+  min-height: 40px; }
+
+.navbar {
+  min-height: 40px;
+  line-height: 20px;
+  transition: all ease-out 1s; }
+
+.navbar-light .navbar-nav .nav-link {
+  color: #888; }
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: .6rem;
+  padding-left: .6rem;
+  text-align: center; }
+
+.navbar-nav {
+  font-size: 1em; }
+
+.bg-light {
+  background-color: #f7f7fa !important; }
+
+.navbar-light .navbar-toggler {
+  background-color: #f7f7fa;
+  border: none; }
+
+.navbar-toggler {
+  font-size: 1rem;
+  line-height: 1;
+  background: 0 0;
+  border: none !important;
+  border-radius: 0 !important; }
+
+.card {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  z-index: 0; }
+
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+
+.card-image {
+  border-radius: 4px 4px 0 0; }
+  .card-image img {
+    opacity: 1;
+    -webkit-transition: .1s ease-in;
+    -moz-transition: .1s ease-in;
+    -o-transition: .1s ease-in;
+    -ms-transition: .1s ease-in;
+    transition: .1s ease-in; }
+  .card-image img:hover {
+    opacity: .6; }
+
+.card-body {
+  padding: 1em;
+  color: #666; }
+  .card-body a {
+    color: #444; }
+
+.card-title:before {
+  content: "// "; }
+
+.card-title {
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  margin-bottom: 2px; }
+
+.card-text {
+  font-weight: 300;
+  font-size: .9em; }
+
+/*// FIN EDITADO DE BOOTSTRAP */

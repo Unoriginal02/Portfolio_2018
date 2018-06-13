@@ -1,0 +1,105 @@
+// REESCRITURA DE BOOTSTRAO
+.container{
+	max-width: 1200px; /*// HE AÑADIDO 48PX PARA COMPENSAR EL PADDING ASIGNADO DESDE EL DOCUMENTO HTML*/
+	padding: 0;
+}
+
+.shrink-nav {
+    min-height: 40px;
+}
+
+.navbar {
+	min-height: 40px;
+	line-height: 20px;
+    transition:all ease-out 1s;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #888;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .6rem;
+    padding-left: .6rem;
+    text-align: center;
+}
+
+.navbar-nav{ 
+    font-size: 1em;
+}
+
+.bg-light{
+  background-color: $pf-background-color !important;  
+}
+
+.navbar-light .navbar-toggler {
+    background-color: $pf-background-color;
+    border: none;
+}
+
+.navbar-toggler {
+    font-size: 1rem;
+    line-height: 1;
+    background: 0 0;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.card{
+    border: none;
+    border-radius: 4px; 
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    z-index: 0;
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius:  4px;
+    border-top-right-radius: 4px;
+}
+
+.card-image{
+    // background-color: #000;
+    border-radius: 4px 4px 0 0;
+
+    img{
+        opacity: 1;
+        -webkit-transition: .1s ease-in;
+        -moz-transition: .1s ease-in;
+        -o-transition: .1s ease-in;
+        -ms-transition: .1s ease-in;
+        transition: .1s ease-in;
+    }
+
+    img:hover{
+        opacity: .6;
+    }
+}
+
+.card-body{
+    padding: 1em;
+    color: $body-color;
+    
+    a{
+        color: $title-color;
+    }
+}
+
+.card-title:before{
+    content: "// "
+}
+
+
+.card-title{
+    font-family: $title-font;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.card-text{
+    font-weight: 300;
+    font-size: .9em;
+}
+
+
+/*// FIN EDITADO DE BOOTSTRAP */
