@@ -188,11 +188,9 @@ a:hover {
     border-top: 1px solid #ccc;
     font-family: "Inconsolata", monospace; }
 
-/*// EDITADO DE WORDPRESS */
 #wpadminbar {
   position: fixed !important; }
 
-/*// FIN EDITADO DE BOOTSTRAP */
 .container {
   max-width: 1200px;
   padding: 0; }
