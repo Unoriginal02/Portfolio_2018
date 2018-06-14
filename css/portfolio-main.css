@@ -2,7 +2,7 @@
   background-color: rgba(50, 50, 200, 0.2); }
 
 .red {
-  background-color: rgba(255, 0, 0, 0.2); }
+  background-color: rgba(255, 0, 0, 0.2) !important; }
 
 .green {
   background-color: rgba(0, 200, 0, 0.2); }
@@ -58,8 +58,15 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-font-smoothing: antialiased; }
 
+.fix-height {
+  height: 100%; }
+
+.pf-nav {
+  z-index: 1020;
+  width: 100%; }
+
 .shrink-nav {
-  min-height: 40px;
+  height: 60px !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.05) !important; }
 
 .pf-icon-shrink {
@@ -70,7 +77,8 @@ body {
   font-size: 90% !important; }
 
 .pf-invisible {
-  opacity: 0; }
+  opacity: 0 !important;
+  pointer-events: none; }
 
 .title {
   transition: all ease-out .5s; }
@@ -97,6 +105,66 @@ body {
     color: #666; }
 
 a:hover {
+  color: #E73C59 !important; }
+
+.pf-mobile-menu-wrap {
+  visibility: visible;
+  position: fixed;
+  top: 90;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: all ease-out .2s; }
+
+.pf-mobile-menu {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  top: -30px; }
+  .pf-mobile-menu ul {
+    padding-left: 0; }
+  .pf-mobile-menu li {
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .pf-mobile-menu li:last-child {
+    border-bottom: 0; }
+  .pf-mobile-menu a {
+    display: block;
+    padding: 30px 0;
+    width: 400px; }
+  @media (max-width: 767px) {
+    .pf-mobile-menu a {
+      padding: 20px 0;
+      width: 300px; } }
+  @media (min-width: 300px) and (orientation: landscape) {
+    .pf-mobile-menu a {
+      padding: 6px 0;
+      width: 300px; }
+    .pf-mobile-menu li {
+      border-bottom: 0; } }
+
+.custom-menu-class ul {
+  margin-bottom: 0; }
+
+.menu li {
+  display: inline-block;
+  padding: 0 12px; }
+
+@media (max-width: 991px) {
+  .menu li {
+    display: block; } }
+
+.custom-menu-class {
+  color: blue; }
+
+.menu-item a {
+  color: #666; }
+
+.active a {
   color: #E73C59 !important; }
 
 .hero-statement {
@@ -197,9 +265,10 @@ a:hover {
   padding: 0; }
 
 .navbar {
+  height: 90px;
   min-height: 40px;
   line-height: 20px;
-  transition: all ease-out 1s;
+  transition: all ease-out .5s;
   box-shadow: 0 2px 6px transparent, 0 1px 1px transparent;
   border-radius: 0px 0px 6px 6px; }
   @media (max-width: 1199px) {
