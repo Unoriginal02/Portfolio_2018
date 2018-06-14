@@ -20,7 +20,7 @@ $border-color: #ccc;
 }
 
 .red{
-	background-color: rgba(255,0,0, .2);
+	background-color: rgba(255,0,0, .2) !important;
 }
 
 .green{
@@ -95,10 +95,22 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.fix-height{
+	height: 100%;
+}
+
+.pf-pull{
+
+}
+
+.pf-nav{
+	z-index: $zindex-sticky;
+	width: 100%;
+}
 
 // Shrink Navigation
 .shrink-nav {
-    min-height: 40px;
+	height: 60px !important;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.05) !important;
 }
 
@@ -112,7 +124,8 @@ body {
 }
 
 .pf-invisible{
-	opacity: 0;
+	opacity: 0 !important;
+	pointer-events: none;
 }
 
 // Navbar Brand
@@ -150,6 +163,108 @@ a:hover{
 	color: $main-color !important;
 }
 
+// MOBILE MENU
+
+.pf-mobile-menu-wrap{
+	visibility: visible;
+	position: fixed;
+	top: 90;
+	z-index: $zindex-dropdown;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	transition:all ease-out .2s;
+}
+
+.pf-mobile-menu{
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	text-align: center;
+	top: -30px;
+	ul{
+		padding-left: 0;
+	}
+
+	li{
+		display: block;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+	}
+
+	li:last-child{
+		border-bottom: 0;
+	}
+
+	a{	
+		display: block;
+		padding: 30px 0;
+		width: 400px;	
+	}
+
+	@include media-breakpoint-down(sm) {
+		a{	
+			padding: 20px 0;
+			width: 300px;
+		}
+	}
+
+	@media (min-width: 300px) and (orientation:landscape) {
+		a{	
+			padding: 6px 0;
+			width: 300px;
+		}
+
+		li{
+			border-bottom: 0;
+		}
+		
+
+	}
+}
+
+
+// Wordpress Menu
+
+.custom-menu-class{
+	ul{
+		margin-bottom:0;
+	}
+}
+
+.menu{
+	li{
+	display: inline-block;
+	padding: 0 12px;
+	}
+
+	@include media-breakpoint-down(lg) {
+
+	}
+
+	@include media-breakpoint-down(md) {
+		li{display: block;}
+	}
+
+	@include media-breakpoint-down(sm) {
+
+	}
+}
+
+.custom-menu-class{
+	color: blue;
+}
+
+.menu-item a{
+	color: $body-color;
+}
+
+.active{
+	a{
+	color: $main-color !important;
+	}
+}
 
 // Hero Statement: The (un)funny sentence at home
 .hero-statement{

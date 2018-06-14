@@ -1,26 +1,27 @@
 /*eslint-env jquery*/
 
 
-// CORRECCIO DE VIDEOS DE YOUTUBE ////////////////////////////
+// FUNCTIONS TO FIX YOUTUBE VIDEOS ////////////////////////////
 
-// Afegeix la classe de video responsive de bootstrap als videos colocats desde Youtube
+// Wraps Youtube video in the format that Bootstrap requires to make them responsive
 $("iframe").wrap("<div class='embed-responsive embed-responsive-16by9 unrwap_p'>"); 
 
-// Wordpress afegeix un <p> a QUALSEVOL item que es coloqui en l'editor de posts. Amb aquesta funció, es retira el "<p>" del objecte que porti aquesta classe.
+// Wordpress adds a <p> tag on whatever element you add in your post. 
+// This function prevents <iframe> to get wraped.
 $(".unrwap_p").unwrap();
 
-// funcio per afegir una classe necessaria pel responsive de Bootstrap
+// Necessary function to add a class to make iframe responsive.
 $(function() {
     $('iframe').addClass('embed-responsive-item');
 });
 
 
-// FUNCIO PER FER FADE IN A TOTA LA PAGINAº ////////////////////
+// FUNCTION TO MAKE THE WHOLE PAGE FADE ON EACH RELOAD ////////////////////
 $(function() {
     $('body').removeClass('fade-out');
 });
 
-// FUNCIO PER FER QUE EL LOGO DEL PORTAFOLI ES FAGI PETITO //////
+// FUNCTION TO MAKE THE MENU SHRIN WHEN THE SCROLL STARTS //////
 $(window).scroll(function(){
     var wscroll = $(this).scrollTop();
     if(wscroll > 100){
@@ -39,7 +40,7 @@ $(window).scroll(function(){
     }
   });
 
-// Arreglo perque també funcioni en smartphones
+// fix to make it work on Smartphones.
 $('body').on({
     'touchmove': function() {
 
@@ -63,3 +64,11 @@ $('body').on({
 
     }
 });
+
+// Toggler function for the mobile menu.
+
+$( function() {
+    $( "#pf-mobile-menu-toggler" ).on( "click", function() {
+      $( ".pf-mobile-menu-wrap" ).toggleClass( "pf-invisible" );
+    });
+  } );
