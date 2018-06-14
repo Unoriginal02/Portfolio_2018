@@ -23,7 +23,7 @@ $(function() {
 // FUNCIO PER FER QUE EL LOGO DEL PORTAFOLI ES FAGI PETITO //////
 $(window).scroll(function(){
     var wscroll = $(this).scrollTop();
-    if(wscroll > 100){
+    if(wscroll > 20){
      $(".navbar").addClass("shrink-nav");
      $(".title").addClass("pf-invisible");
      $(".name").addClass("pf-name-shrink");
@@ -45,7 +45,7 @@ $('body').on({
 
     $(window).scroll(function(){
         var wscroll = $(this).scrollTop();
-        if(wscroll > 100){
+        if(wscroll > 20){
          $(".navbar").addClass("shrink-nav");
          $(".title").addClass("pf-invisible");
          $(".name").addClass("pf-name-shrink");
