@@ -10,6 +10,19 @@
 	min-height: 40px;
 	line-height: 20px;
     transition:all ease-out 1s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0), 0 1px 1px rgba(0,0,0,0);
+    border-radius: 0px 0px 6px 6px;
+    
+    @include media-breakpoint-down(lg) {
+        border-radius: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+    }
+
+    @include media-breakpoint-down(sm) {
+    }
+
 }
 
 .navbar-light .navbar-nav .nav-link {
