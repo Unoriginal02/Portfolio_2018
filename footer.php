@@ -1,7 +1,7 @@
 </div> <!-- .row -->
 <div class="pf_footer">
 	<div class="col-lg-12 text-center">
-	  <p>jairo.contact@gmail.com</p>
+	  <p><a href="mailto:jairo.contact@gmail.com">jairo.contact@gmail.com</a></p>
 	</div>
 </div>
 </div> <!-- .container -->
