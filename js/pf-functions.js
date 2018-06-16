@@ -15,10 +15,9 @@ $(function() {
     $('iframe').addClass('embed-responsive-item');
 });
 
-
-// FUNCTION TO MAKE THE WHOLE PAGE FADE ON EACH RELOAD ////////////////////
-$(function() {
-    $('body').removeClass('fade-out');
+// FUNCTION TO MAKE CERTAIN ELEMENTS TO SLIDE UP WHEN THE PAGE IS LOADED //////
+$( document ).ready(function() {
+    $('.pf-velo-slideIn').velocity("transition.slideUpIn", { stagger: 75 });
 });
 
 // FUNCTION TO MAKE THE MENU SHRIN WHEN THE SCROLL STARTS //////
