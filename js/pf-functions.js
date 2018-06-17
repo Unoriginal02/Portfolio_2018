@@ -15,13 +15,17 @@ $(function() {
     $('iframe').addClass('embed-responsive-item');
 });
 
-
-// FUNCTION TO MAKE THE WHOLE PAGE FADE ON EACH RELOAD ////////////////////
+// FUNCTION TO MAKE CERTAIN ELEMENTS TO SLIDE UP WHEN THE PAGE IS LOADED //////
 $(function() {
-    $('body').removeClass('fade-out');
+    $('.pf-velo-slideIn').velocity("transition.slideUpIn", { easing: 'easeOutQuad', stagger: 75, duration: 300 });
 });
 
-// FUNCTION TO MAKE THE MENU SHRIN WHEN THE SCROLL STARTS //////
+$(function() {
+    $(".pf-velo-slideIn-content").velocity("transition.fadeIn", { easing: 'easeOutQuad', stagger: 20, duration: 300 });
+});
+
+
+// FUNCTION TO MAKE THE MENU SHRINK WHEN THE SCROLL STARTS //////
 $(window).scroll(function(){
     var wscroll = $(this).scrollTop();
     if(wscroll > 100){
@@ -66,9 +70,32 @@ $('body').on({
 });
 
 // Toggler function for the mobile menu.
-
-$( function() {
-    $( "#pf-mobile-menu-toggler" ).on( "click", function() {
-      $( ".pf-mobile-menu-wrap" ).toggleClass( "pf-invisible" );
+var click = function() {
+$("#pf-mobile-menu-toggler").click(function() {
+        var $this = $(this),
+            flag = $this.data("clickflag") || false;
+        if (!flag) {
+            $( ".pf-mobile-menu-wrap" ).removeClass( "pf-invisible" );
+            $( ".pf-mobile-menu-wrap li" ).velocity( 'transition.slideLeftBigIn', { easing: 'easeOutQuint', stagger: 75, duration: 100 });
+            // Unbind the event
+            $('#pf-mobile-menu-toggler').unbind();
+            // Call the function 
+            setTimeout(function() {
+                click();
+            }, 1000);
+        } else {
+            $( ".pf-mobile-menu-wrap li" ).velocity( 'transition.slideLeftBigOut', { easing: 'easeOutQuint', stagger: 75, duration: 100 });
+            $( ".pf-mobile-menu-wrap" ).addClass( "pf-invisible" );
+            // Unbind the event
+            $('#pf-mobile-menu-toggler').unbind();
+            // Call the function 
+            setTimeout(function() {
+                click();
+            }, 1000);
+        }
+        $this.data("clickflag", !flag);
     });
-  } );
+};
+click();
+
+

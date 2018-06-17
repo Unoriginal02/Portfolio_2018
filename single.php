@@ -3,7 +3,7 @@
 <div class="row mr-0 ml-0 justify-content-center">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div class="col-12 post-wrapper">
+		<div class="col-12 post-wrapper pf-velo-slideIn-content">
 			<div class="post-title"><h2><?php the_title(); ?></h2>
 				<p><?php the_excerpt(); ?></p>
 			</div>

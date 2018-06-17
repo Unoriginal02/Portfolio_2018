@@ -13,6 +13,13 @@ $body-color: #666;
 $pf-background-color: #f7f7fa;
 $border-color: #ccc;
 
+@mixin easing500 {
+-webkit-transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+   -moz-transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+     -o-transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+        transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+
 // CONTROL CLASSES - I use those classes as a helpers while building the layout.
 
 .blue {
@@ -99,10 +106,6 @@ body {
 	height: 100%;
 }
 
-.pf-pull{
-
-}
-
 .pf-nav{
 	z-index: $zindex-sticky;
 	width: 100%;
@@ -130,12 +133,12 @@ body {
 
 // Navbar Brand
 .title{
-    transition:all ease-out .5s;
+	@include easing500;
 }
 
 .pf-icon{
 	width: 64px;
-	transition:all ease-out .5s;
+	@include easing500;
 }
 
 .brand-name{
@@ -150,7 +153,7 @@ body {
 		font-size: 1.12em;
 		font-weight: 700;
 		color: $title-color;
-		transition:all ease-out .5s;
+		@include easing500;
 	}
 
 	.title{
@@ -173,7 +176,7 @@ a:hover{
 	height: 100%;
 	width: 100%;
 	opacity: 1;
-	transition:all ease-out .2s;
+	@include easing500;
 }
 
 .pf-mobile-menu{
@@ -189,7 +192,7 @@ a:hover{
 	}
 
 	li{
-		display: block;
+		display: block !important;
 		border-bottom: 1px solid rgba(0,0,0,.1);
 	}
 
@@ -236,7 +239,7 @@ a:hover{
 .menu{
 	li{
 	display: inline-block;
-	padding: 0 12px;
+	padding: 0 8px;
 	}
 
 	@include media-breakpoint-down(lg) {
