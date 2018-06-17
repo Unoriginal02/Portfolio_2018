@@ -173,7 +173,7 @@ a:hover{
 	height: 100%;
 	width: 100%;
 	opacity: 1;
-	transition:all ease-out .2s;
+	transition:all ease-out .3s;
 }
 
 .pf-mobile-menu{
@@ -189,7 +189,7 @@ a:hover{
 	}
 
 	li{
-		display: block;
+		display: block !important;
 		border-bottom: 1px solid rgba(0,0,0,.1);
 	}
 

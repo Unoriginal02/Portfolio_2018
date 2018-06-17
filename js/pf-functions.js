@@ -16,9 +16,14 @@ $(function() {
 });
 
 // FUNCTION TO MAKE CERTAIN ELEMENTS TO SLIDE UP WHEN THE PAGE IS LOADED //////
-$( document ).ready(function() {
-    $('.pf-velo-slideIn').velocity("transition.slideUpIn", { stagger: 75 });
+$(function() {
+    $('.pf-velo-slideIn').velocity("transition.slideUpIn", { easing: 'easeOutQuad', stagger: 100, duration: 300 });
 });
+
+$(function() {
+    $(".pf-velo-slideIn-content").velocity("transition.fadeIn", { easing: 'easeOutQuad', stagger: 20, duration: 300 });
+});
+
 
 // FUNCTION TO MAKE THE MENU SHRIN WHEN THE SCROLL STARTS //////
 $(window).scroll(function(){
@@ -65,9 +70,32 @@ $('body').on({
 });
 
 // Toggler function for the mobile menu.
-
-$( function() {
-    $( "#pf-mobile-menu-toggler" ).on( "click", function() {
-      $( ".pf-mobile-menu-wrap" ).toggleClass( "pf-invisible" );
+var click = function() {
+$("#pf-mobile-menu-toggler").click(function() {
+        var $this = $(this),
+            flag = $this.data("clickflag") || false;
+        if (!flag) {
+            $( ".pf-mobile-menu-wrap" ).removeClass( "pf-invisible" );
+            $( ".pf-mobile-menu-wrap li" ).velocity( 'transition.slideLeftBigIn', { easing: 'easeOutQuint', stagger: 100, duration: 200 });
+            // Unbind the event
+            $('#pf-mobile-menu-toggler').unbind();
+            // Call the function 
+            setTimeout(function() {
+                click();
+            }, 420);
+        } else {
+            $( ".pf-mobile-menu-wrap li" ).velocity( 'transition.slideLeftBigOut', { easing: 'easeOutQuint', stagger: 100, duration: 200 });
+            $( ".pf-mobile-menu-wrap" ).addClass( "pf-invisible" );
+            // Unbind the event
+            $('#pf-mobile-menu-toggler').unbind();
+            // Call the function 
+            setTimeout(function() {
+                click();
+            }, 420);
+        }
+        $this.data("clickflag", !flag);
     });
-  } );
+};
+click();
+
+

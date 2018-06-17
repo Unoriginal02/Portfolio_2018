@@ -13,7 +13,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<div class="col-lg-4 col-md-6 col-sm-12 mb-4  d-flex align-items-stretch">
+	<div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch">
 		<div class="card pf-velo-slideIn">
 			<div class="card-image">
 				<?php if ( has_post_thumbnail() ) : ?>
