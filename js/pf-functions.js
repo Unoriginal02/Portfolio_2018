@@ -17,11 +17,11 @@ $(function() {
 
 // FUNCTION TO MAKE CERTAIN ELEMENTS TO SLIDE UP WHEN THE PAGE IS LOADED //////
 $(function() {
-    $('.pf-velo-slideIn').velocity("transition.slideUpIn", { easing: 'easeOutQuad', stagger: 75, duration: 300 });
+    $('.pf-velo-slideIn').velocity("transition.slideUpIn", { easing: 'easeOutCubic', stagger: 75, duration: 300 });
 });
 
 $(function() {
-    $(".pf-velo-slideIn-content").velocity("transition.fadeIn", { easing: 'easeOutQuad', stagger: 20, duration: 300 });
+    $(".pf-velo-slideIn-content").velocity("transition.fadeIn", { easing: 'easeOutCubic', stagger: 20, duration: 300 });
 });
 
 
