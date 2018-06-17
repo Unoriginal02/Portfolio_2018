@@ -25,7 +25,7 @@ $(function() {
 });
 
 
-// FUNCTION TO MAKE THE MENU SHRIN WHEN THE SCROLL STARTS //////
+// FUNCTION TO MAKE THE MENU SHRINK WHEN THE SCROLL STARTS //////
 $(window).scroll(function(){
     var wscroll = $(this).scrollTop();
     if(wscroll > 100){
