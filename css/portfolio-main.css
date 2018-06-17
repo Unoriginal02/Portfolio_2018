@@ -127,7 +127,11 @@ a:hover {
   height: 100%;
   width: 100%;
   opacity: 1;
-  transition: all ease-out .3s; }
+  -webkit-transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  /* easeOutCubic */ }
 
 .pf-mobile-menu {
   display: flex;
