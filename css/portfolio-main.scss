@@ -270,6 +270,12 @@ a:hover{
 }
 
 // Hero Statement: The (un)funny sentence at home
+.hero-statement-hide{
+	@include media-breakpoint-down(sm) {
+		display: none !important;
+	}
+}
+
 .hero-statement{
 	border-radius: 4px;
 	background-color: #3b4044;
@@ -309,7 +315,6 @@ a:hover{
 	}
 
 	@include media-breakpoint-down(sm) {
-		display: none !important;
 		padding: 40px;
 	}
 

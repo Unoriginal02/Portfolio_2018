@@ -2,7 +2,7 @@
 
 <div class="row mr-0 ml-0">
 
-  <div class="col-lg-12 mb-4">
+  <div class="col-lg-12 mb-4 hero-statement-hide">
     <div class="hero-statement text-center pf-velo-slideIn">
       <h2>Pensaba que <b>Ariana Grande</b> era una tipografía.</h2>
       <p>- Alguien, en internet</p>

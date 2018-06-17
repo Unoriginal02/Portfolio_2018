@@ -183,6 +183,10 @@ a:hover {
 .active a {
   color: #E73C59 !important; }
 
+@media (max-width: 767px) {
+  .hero-statement-hide {
+    display: none !important; } }
+
 .hero-statement {
   border-radius: 4px;
   background-color: #3b4044;
@@ -204,7 +208,6 @@ a:hover {
     margin-bottom: 0; }
   @media (max-width: 767px) {
     .hero-statement {
-      display: none !important;
       padding: 40px; } }
 
 .post-title {
