@@ -309,6 +309,7 @@ a:hover{
 	}
 
 	@include media-breakpoint-down(sm) {
+		display: none !important;
 		padding: 40px;
 	}
 
