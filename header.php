@@ -29,7 +29,7 @@
 
 	<div class="container pl-xl-4 pr-xl-4">
 
-		<nav class="pl-0 pr-0 navbar navbar-expand-lg navbar-light bg-light pf-nav">
+		<nav class="pl-0 pr-0 navbar sticky-top navbar-expand-lg navbar-light bg-light pf-nav">
 			<a class="pl-3 navbar-brand mr-0" href="<?php echo get_bloginfo('url'); ?>">
 		      <img class="pf-icon icon float-left" src="<?php echo get_template_directory_uri(); ?>/img/header-logo.svg" class="d-inline-block align-top" alt="">
 		      <div  class="brand-name">

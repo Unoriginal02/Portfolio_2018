@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="row mr-0 ml-0 justify-content-center pf-content-push">
+<div class="row mr-0 ml-0 justify-content-center">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="col-12 post-wrapper pf-velo-slideIn-content">

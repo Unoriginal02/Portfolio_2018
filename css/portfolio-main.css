@@ -61,19 +61,9 @@ body {
 .fix-height {
   height: 100%; }
 
-.pf-content-push {
-  margin-top: 90px !important; }
-
 .pf-nav {
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
   z-index: 1020;
-  width: 100%;
-  max-width: 1149px; }
-  @media (max-width: 1199px) {
-    .pf-nav {
-      max-width: 100%; } }
+  width: 100%; }
 
 .shrink-nav {
   height: 60px !important;

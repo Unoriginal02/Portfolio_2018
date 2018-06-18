@@ -106,21 +106,9 @@ body {
 	height: 100%;
 }
 
-.pf-content-push{ 
-	margin-top: 90px !important;
-}
-
- .pf-nav{
-	margin: 0 auto;
-	position: fixed;
-	top: 0;
+.pf-nav{
 	z-index: $zindex-sticky;
 	width: 100%;
-	max-width: 1149px;
-
-	@include media-breakpoint-down(lg) {
-	max-width: 100%;
-	}
 }
 
 // Shrink Navigation
