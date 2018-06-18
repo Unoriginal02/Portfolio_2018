@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="row mr-0 ml-0">
+<div class="row mr-0 ml-0 pf-content-push">
 
   <div class="col-lg-12 mb-4 hero-statement-hide">
     <div class="hero-statement text-center pf-velo-slideIn">
