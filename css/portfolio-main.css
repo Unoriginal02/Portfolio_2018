@@ -139,8 +139,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   background-color: white;
-  text-align: center;
-  top: -30px; }
+  text-align: center; }
   .pf-mobile-menu ul {
     padding-left: 0; }
   .pf-mobile-menu li {
